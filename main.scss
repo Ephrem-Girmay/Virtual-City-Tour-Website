@@ -1,0 +1,72 @@
+/** @format */
+@import "sass/weather";
+@import "sassvariables";
+
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+}
+
+html {
+	font-family: "Roboto Condensed", sans-serif;
+	color: #35323e;
+	font-size: 62.5%;
+	line-height: 1;
+}
+
+.header {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+    p{
+        color: $color-white;
+    font-size: 2rem;
+    text-align: center;
+    background-color: $color-bg-dark;
+    padding: 2rem;
+    }
+	.cities2-container {
+		width: 30rem;
+		position: absolute;
+		top: 10%;
+		right: 10%;
+		background-color:$color-bg-dark ;
+		padding: 1rem 7.5rem;
+
+		border-top-right-radius: 14px;
+		border-top-left-radius: 14px;
+
+        p{
+            color: $color-white;
+        font-size: 2rem;
+        text-align: center;
+        }
+	}
+    .weather-container,
+	.local-time {
+		border-bottom-left-radius: 14px;
+		border-bottom-right-radius: 14px;
+		height: 30rem;
+		width: 30rem;
+		background-color:$color-bg-dark ;
+		position: absolute;
+		bottom: 10%;
+
+        p{
+            color: $color-white;
+        font-size: 2rem;
+        text-align: center;
+        }
+	}
+	.weather-container {
+		left: 10%;
+	}
+	.local-time {
+		right: 10%;
+	}
+}
