@@ -1,13 +1,13 @@
+/** @format */
 
-const btnNav = document.querySelector('.btn-city');
-const header = document.querySelector('.header');
+const btnNavEp = document.querySelector(".btn-city");
+const headerEp = document.querySelector(".header");
 
-const btnGame = document.querySelector('.btn-game');
+const btnGameEp = document.querySelector(".btn-game");
 
-
-btnNav.addEventListener('click', function () {
-  header.classList.toggle('nav-open');
+btnNavEp.addEventListener("click", function () {
+	headerEp.classList.toggle("nav-open");
 });
-btnGame.addEventListener('click', function () {
-  header.classList.toggle('nav-game-open');
+btnGameEp.addEventListener("click", function () {
+	headerEp.classList.toggle("nav-game-open");
 });
