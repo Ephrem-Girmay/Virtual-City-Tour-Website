@@ -1,5 +1,41 @@
 /** @format */
 /** @format */
+.roll .section-hero {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  position: relative;
+}
+
+.roll .section-hero .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.roll .section-hero .main-header h1 {
+  color: black;
+}
+
 * {
   position: relative;
   margin: 0;
@@ -9,6 +45,7 @@
 }
 
 body {
+  background-color: #f7f7f7;
   position: relative;
 }
 
@@ -19,60 +56,191 @@ html {
   line-height: 1;
 }
 
-.header {
-  height: 100vh;
-  width: 100%;
+header {
   position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.header p {
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
-  background-color: #131212;
-  padding: 2rem;
+header video {
+  height: 100%;
+  width: 100%;
+  z-index: -4;
+  transform: scale(1.24);
+  -webkit-transform: scale(1.24);
+  -moz-transform: scale(1.24);
+  -ms-transform: scale(1.24);
+  -o-transform: scale(1.24);
 }
 
-.header .cities2-container {
+header .cities1-container,
+header .cities2-container {
   width: 30rem;
   position: absolute;
   top: 10%;
   right: 10%;
-  background-color: #131212;
+  background-color: rgba(0, 0, 0, 0.351);
   padding: 1rem 7.5rem;
   border-top-right-radius: 14px;
   border-top-left-radius: 14px;
 }
 
-.header .cities2-container p {
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
+header .cities1-container {
+  left: 10%;
 }
 
-.header .weather-container,
-.header .local-time {
+header .cities2-container {
+  right: 10%;
+}
+
+header .btn-game,
+header .btn-city {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+header .nav-game,
+header .nav-wrapper {
+  opacity: 0;
+  width: 30rem;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.351);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  border: none;
+  pointer-events: none;
+  visibility: none;
+  z-index: 9999;
+  -webkit-transform: translatey(-100%);
+  -moz-transform: translatey(100%);
+  -ms-transform: translatey(100%);
+  -o-transform: translatey(100%);
+}
+
+header .nav-game {
+  top: 14%;
+  left: 10%;
+}
+
+header .nav-wrapper {
+  top: 14%;
+  right: 10%;
+}
+
+header .nav-game ol,
+header .nav-wrapper ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+header .nav-game ol a,
+header .nav-wrapper ol a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-left: 8rem;
+}
+
+header .weather-container,
+header .local-time {
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   height: 30rem;
   width: 30rem;
-  background-color: #131212;
+  background-color: rgba(16, 17, 17, 0.562);
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
 }
 
-.header .weather-container p,
-.header .local-time p {
+header .weather-container h1,
+header .local-time h1 {
   color: #fff;
-  font-size: 2rem;
   text-align: center;
+  margin-top: 4rem;
 }
 
-.header .weather-container {
+header .weather-container {
   left: 10%;
 }
 
-.header .local-time {
+header .local-time {
   right: 10%;
+  height: 33rem;
+}
+
+header .local-time::before {
+  content: "";
+  display: inline-block;
+  height: 3rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f1f4f3;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header .png-container {
+  position: relative;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(img/car4.png), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.22)), to(rgba(0, 0, 0, 0.762)));
+  background-image: url(img/car4.png), linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.762));
+  background-size: cover;
+}
+
+header audio {
+  height: 3rem;
+  border-radius: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+}
+
+.nav-game-open .nav-game,
+.nav-open .nav-wrapper {
+  opacity: 100;
+  pointer-events: auto;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-transform: translatey(0);
+  -moz-transform: translatey(0);
+  -ms-transform: translatey(0);
+  -o-transform: translatey(0);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,181 @@
 /** @format */
-@import "sass/weather";
-@import "sass/variables";
+@import "hero";
+@import "variables";
 
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(247, 247, 247);
+
+	position: relative;
+}
+
+html {
+	font-family: "Roboto Condensed", sans-serif;
+	color: #35323e;
+	font-size: 62.5%;
+	line-height: 1;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+
+	video {
+		height: 100%;
+		width: 100%;
+		z-index: -4;
+		transform: scale(1.24);
+		-webkit-transform: scale(1.24);
+		-moz-transform: scale(1.24);
+		-ms-transform: scale(1.24);
+		-o-transform: scale(1.24);
+	}
+
+	.cities1-container,
+	.cities2-container {
+		width: 30rem;
+		position: absolute;
+		top: 10%;
+		right: 10%;
+		background-color: rgba(0, 0, 0, 0.351);
+		padding: 1rem 7.5rem;
+
+		border-top-right-radius: 14px;
+		border-top-left-radius: 14px;
+	}
+	.cities1-container {
+		left: 10%;
+	}
+	.cities2-container {
+		right: 10%;
+	}
+	.btn-game,
+	.btn-city {
+		color: #fff;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 1.6rem;
+		font-weight: 300;
+	}
+	.nav-game,
+	.nav-wrapper {
+		opacity: 0;
+		width: 30rem;
+		position: absolute;
+
+		background-color: rgba(0, 0, 0, 0.351);
+		display: flex;
+		flex-direction: column;
+		transform: translatey(100%);
+		transition: 1s all;
+		border: none;
+		pointer-events: none;
+		visibility: none;
+		z-index: 9999;
+		-webkit-transform: translatey(-100%);
+		-moz-transform: translatey(100%);
+		-ms-transform: translatey(100%);
+		-o-transform: translatey(100%);
+	}
+	.nav-game {
+		top: 14%;
+		left: 10%;
+	}
+	.nav-wrapper {
+		top: 14%;
+		right: 10%;
+	}
+
+	.nav-game ol,
+	.nav-wrapper ol {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 2rem;
+		padding: 3rem 0;
+	}
+	.nav-game ol a,
+	.nav-wrapper ol a {
+		color: #fff;
+		text-decoration: none;
+		cursor: pointer;
+		font-size: 1.6rem;
+		font-weight: 300;
+		margin-left: 8rem;
+	}
+
+	.weather-container,
+	.local-time {
+		border-bottom-left-radius: 14px;
+		border-bottom-right-radius: 14px;
+		height: 30rem;
+		width: 30rem;
+		background-color: rgba(16, 17, 17, 0.562);
+		position: absolute;
+		bottom: 5%;
+		h1 {
+			color: #fff;
+			text-align: center;
+			margin-top: 4rem;
+		}
+	}
+	.weather-container {
+		left: 10%;
+	}
+	.local-time {
+		right: 10%;
+		height: 33rem;
+		&::before {
+			content: "";
+			display: inline-block;
+			height: 3rem;
+			width: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: rgb(241, 244, 243);
+			transition: all 0.4s;
+		}
+	}
+	.png-container {
+		position: relative;
+		position: absolute;
+		opacity: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: url(img/car4.png),
+			linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.762));
+		background-size: cover;
+	}
+	audio {
+		height: 3rem;
+		border-radius: none;
+		-webkit-border-radius: none;
+		-moz-border-radius: none;
+		-ms-border-radius: none;
+		-o-border-radius: none;
+	}
+}
+.nav-game-open .nav-game,
+.nav-open .nav-wrapper {
+	opacity: 100;
+	pointer-events: auto;
+	overflow: hidden;
+	transform: translatey(0);
+	-webkit-transform: translatey(0);
+	-moz-transform: translatey(0);
+	-ms-transform: translatey(0);
+	-o-transform: translatey(0);
+}
