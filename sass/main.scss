@@ -41,7 +41,7 @@ header {
 	.cities2-container {
 		width: 30rem;
 		position: absolute;
-		top: 10%;
+		top: 8%;
 		right: 10%;
 		background-color: rgba(0, 0, 0, 0.351);
 		padding: 1rem 7.5rem;
@@ -69,7 +69,7 @@ header {
 		opacity: 0;
 		width: 30rem;
 		position: absolute;
-
+        top: 12%;
 		background-color: rgba(0, 0, 0, 0.351);
 		display: flex;
 		flex-direction: column;
@@ -85,11 +85,11 @@ header {
 		-o-transform: translatey(100%);
 	}
 	.nav-game {
-		top: 14%;
+		
 		left: 10%;
 	}
 	.nav-wrapper {
-		top: 14%;
+		
 		right: 10%;
 	}
 
