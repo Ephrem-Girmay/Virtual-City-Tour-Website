@@ -47,3 +47,9 @@ function timeRome() {
   document.getElementById("time").innerHTML = time;
 }
 
+function timeStockholm() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Europe/Stockholm",
+  });
+  document.getElementById("time").innerHTML = time;
+}
