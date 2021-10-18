@@ -53,3 +53,10 @@ function timeStockholm() {
   });
   document.getElementById("time").innerHTML = time;
 }
+
+function timeTokyo() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Tokyo",
+  });
+  document.getElementById("time").innerHTML = time;
+}
