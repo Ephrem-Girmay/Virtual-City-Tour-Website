@@ -39,3 +39,11 @@ function timeReykjavik() {
   });
   document.getElementById("time").innerHTML = time;
 }
+
+function timeRome() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Europe/Rome",
+  });
+  document.getElementById("time").innerHTML = time;
+}
+
