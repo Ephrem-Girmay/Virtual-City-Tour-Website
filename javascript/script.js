@@ -19,4 +19,10 @@ function timeBerlin() {
   document.getElementById("time").innerHTML = timeLA;
 }
 
+function timeNewYork() {
+  var timeLA = new Date().toLocaleString("en-US", {
+    timeZone: "America/New_York",
+  });
+  document.getElementById("time").innerHTML = timeLA;
+}
 
