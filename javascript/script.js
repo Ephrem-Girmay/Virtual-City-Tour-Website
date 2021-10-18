@@ -12,6 +12,20 @@ btnGameEp.addEventListener("click", function () {
   headerEp.classList.toggle("nav-game-open");
 });
 
+function timeAbu() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Etc/GMT-4",
+  });
+  document.getElementById("time").innerHTML = time;
+}
+
+function timeAddis() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Africa/Addis_Ababa",
+  });
+  document.getElementById("time").innerHTML = time;
+}
+
 function timeBerlin() {
   var time = new Date().toLocaleString("en-US", {
     timeZone: "Europe/Berlin",

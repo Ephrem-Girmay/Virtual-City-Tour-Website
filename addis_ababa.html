@@ -21,15 +21,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="queries.css" />
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/main.css" />
     <link rel="stylesheet" href="sass/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="timeAddis()">
     <header class="roll header">
-        <div class="png-container">
-            </div>
-            <iframe
+      <div class="png-container"></div>
+      <iframe
         frameborder="0"
         allowfullscreen="1"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,17 +46,18 @@
       </div>
       <div class="nav-wrapper">
         <ol>
-            <a href="index.html">home</a>
-            <a href="abu_dhabi.html">Abu Dhabi</a>
-            <a href="addis_ababa.html">Addis Ababa</a>
-            <a href="berlin.html">Berlin</a>
-            <a href="new_york.html">New York</a>
-            <a href="perth.html">Perth</a>
-            <a href="reykjavik.html">Reykjavik</a>
-            <a href="rome.html">Rome</a>
-            <a href="stockholm.html">Stockholm</a>
-            <a href="tokyo.html">Tokyo</a>a>
-            <a href="zagreb.html">Zagreb</a>
+          <a href="index.html">home</a>
+          <a href="abu_dhabi.html">Abu Dhabi</a>
+          <a href="addis_ababa.html">Addis Ababa</a>
+          <a href="berlin.html">Berlin</a>
+          <a href="new_york.html">New York</a>
+          <a href="perth.html">Perth</a>
+          <a href="reykjavik.html">Reykjavik</a>
+          <a href="rome.html">Rome</a>
+          <a href="stockholm.html">Stockholm</a>
+          <a href="tokyo.html">Tokyo</a
+          >a>
+          <a href="zagreb.html">Zagreb</a>
         </ol>
       </div>
       <div class="cities1-container">
@@ -77,14 +77,21 @@
           <a href="">City</a>
         </ol>
       </div>
-     
+
       <div class="weather-container"><h1>Isac</h1></div>
       <div class="local-time">
-          
-       
-        <audio controls="" autoplay="" class="react-audio-player " id="audio" preload="metadata" src="https://lyd.nrk.no/nrk_radio_p1_hedmark_og_oppland_mp3_h" title="https://lyd.nrk.no/nrk_radio_p1_hedmark_og_oppland_mp3_h"></audio>
+        <audio
+          controls=""
+          autoplay=""
+          class="react-audio-player"
+          id="audio"
+          preload="metadata"
+          src="https://lyd.nrk.no/nrk_radio_p1_hedmark_og_oppland_mp3_h"
+          title="https://lyd.nrk.no/nrk_radio_p1_hedmark_og_oppland_mp3_h"
+        ></audio>
 
-        <h1>Sophie</h1>
+        <div class="timeWrapper"></div>
+        <div id="time"></div>
       </div>
     </header>
     <script src="javascript/script.js"></script>
