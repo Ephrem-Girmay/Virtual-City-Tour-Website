@@ -33,3 +33,9 @@ function timePerth() {
   document.getElementById("time").innerHTML = time;
 }
 
+function timeReykjavik() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Atlantic/Reykjavik",
+  });
+  document.getElementById("time").innerHTML = time;
+}
