@@ -60,3 +60,10 @@ function timeTokyo() {
   });
   document.getElementById("time").innerHTML = time;
 }
+
+function timeZagreb() {
+  var time = new Date().toLocaleString("en-US", {
+    timeZone: "Europe/Zagreb",
+  });
+  document.getElementById("time").innerHTML = time;
+}
