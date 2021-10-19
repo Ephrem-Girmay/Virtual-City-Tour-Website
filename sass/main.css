@@ -37,15 +37,6 @@
 }
 
 /** @format */
-#time {
-  margin-top: 5rem;
-  color: #fff;
-  height: 4rem;
-  width: 7rem;
-  font-size: 20px;
-  text-align: center;
-}
-
 * {
   position: relative;
   margin: 0;
@@ -83,43 +74,22 @@ header video {
   -o-transform: scale(1.24);
 }
 
-header .cities1-container,
-header .cities2-container {
-  width: 30rem;
+header .aside-wrapper {
+  height: 90vh;
   position: absolute;
   top: 8%;
   right: 10%;
-  background-color: rgba(0, 0, 0, 0.351);
-  padding: 1rem 7.5rem;
-  border-top-right-radius: 14px;
-  border-top-left-radius: 14px;
+  font-size: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30rem;
+      grid-template-columns: 30rem;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+  gap: 0;
 }
 
-header .cities1-container {
-  left: 10%;
-}
-
-header .cities2-container {
-  right: 10%;
-}
-
-header .btn-game,
-header .btn-city {
-  color: #fff;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-
-header .nav-game,
-header .nav-wrapper {
-  opacity: 0;
-  width: 30rem;
-  position: absolute;
-  top: 12%;
-  background-color: rgba(0, 0, 0, 0.351);
+header .aside-wrapper .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,59 +97,77 @@ header .nav-wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  -webkit-transition: 1s all;
-  transition: 1s all;
-  border: none;
-  pointer-events: none;
-  visibility: none;
-  z-index: 9999;
-  -webkit-transform: translatey(-100%);
-  -moz-transform: translatey(100%);
-  -ms-transform: translatey(100%);
-  -o-transform: translatey(100%);
 }
 
-header .nav-game {
-  left: 10%;
-}
-
-header .nav-wrapper {
-  right: 10%;
-}
-
-header .nav-game ol,
-header .nav-wrapper ol {
+header .aside-wrapper .nav-container .cities2-container {
+  background-color: rgba(14, 13, 14, 0.733);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-inline: 2px #fff solid;
+}
+
+header .aside-wrapper .nav-container .cities2-container button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+header .local-time {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.733);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 2rem;
-  padding: 3rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: inset 0 0 10px #fff;
+          box-shadow: inset 0 0 10px #fff;
 }
 
-header .nav-game ol a,
-header .nav-wrapper ol a {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-left: 8rem;
+header .local-time .city-name,
+header .local-time #time {
+  font-family: "Orbitron", sans-serif;
+  color: #0e3742;
+  width: 100%;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+  line-height: 2em;
+  outline: none;
+  animation: dtime 5s linear 3;
+  -webkit-animation: dtime 5s linear 3;
 }
 
-header .weather-container,
-header .local-time {
+header .local-time #time {
+  font-size: 3rem;
+}
+
+header .local-time .city-name {
+  font-size: 4.2rem;
+}
+
+header .local-time:hover #time,
+header .local-time:hover .city-name {
+  animation: dtime 5s linear infinite;
+  -webkit-animation: dtime 5s linear infinite;
+}
+
+.weather-container {
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   height: 30rem;
@@ -189,67 +177,142 @@ header .local-time {
   bottom: 5%;
 }
 
-header .weather-container h1,
-header .local-time h1 {
+.weather-container h1 {
   color: #fff;
   text-align: center;
   margin-top: 4rem;
 }
 
-header .weather-container {
+.weather-container {
   left: 10%;
 }
 
-header .local-time {
-  right: 10%;
-  height: 33rem;
-}
-
-header .local-time::before {
-  content: "";
-  display: inline-block;
-  height: 3rem;
-  width: 100%;
+audio {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #f1f4f3;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-header .png-container {
-  position: relative;
-  position: absolute;
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url(img/car4.png), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.22)), to(rgba(0, 0, 0, 0.762)));
-  background-image: url(img/car4.png), linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.762));
-  background-size: cover;
-}
-
-header audio {
   height: 3rem;
   border-radius: none;
   -webkit-border-radius: none;
   -moz-border-radius: none;
   -ms-border-radius: none;
   -o-border-radius: none;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
-.nav-game-open .nav-game,
 .nav-open .nav-wrapper {
   opacity: 100;
   pointer-events: auto;
-  overflow: hidden;
+  overflow: scroll;
   transform: translatey(0);
   -webkit-transform: translatey(0);
   -moz-transform: translatey(0);
   -ms-transform: translatey(0);
   -o-transform: translatey(0);
+}
+
+.nav-wrapper {
+  border-inline: 2px #fff solid;
+  transform: scale(0.2);
+  transform: translateY(-120%);
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  -o-transform: scale(0.2);
+  background-color: rgba(14, 13, 14, 0.733);
+  overflow-y: scroll;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+
+.nav-wrapper ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 9rem;
+  padding-top: 2rem;
+}
+
+.nav-wrapper a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-wrapper a:first-child {
+  font-size: 2.2rem;
+  margin-left: -2rem;
+}
+
+@-webkit-keyframes dtime {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
+
+@keyframes dtime {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
 }
 /*# sourceMappingURL=main.css.map */
