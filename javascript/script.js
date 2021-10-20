@@ -80,14 +80,17 @@ function timeZagreb() {
 }
 
 //storing user's input into
+var cityArray = [];
+localStorage.setItem("tag", JSON.stringify(cityArray));
+
 function cityInsert() {
   const cityName = document.getElementById("city");
   const something = cityName.value;
 
   if (something) {
-    localStorage.setItem("tag", something);
+    var cityArray = JSON.parse(localStorage.getItem("tag"));
+    cityArray.push(cityName.value);
+    localStorage.setItem("tag", JSON.stringify(cityArray));
     alert("Your answer is submitted");
   } else alert("Don't leave this field empty");
-
-  const hallo = localStorage.getItem(something);
 }
