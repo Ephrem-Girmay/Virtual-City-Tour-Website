@@ -3,7 +3,7 @@
 .roll .section-hero {
   height: 100%;
   width: 100%;
-  background-color: #0f1010;
+  background-color: #4f6679;
   position: relative;
 }
 
@@ -73,7 +73,7 @@
 
 .roll .section-hero .main-header .btn--white {
   background-color: #fff;
-  color: #777;
+  color: #464444;
 }
 
 .roll .section-hero .main-header .btn--animated {
