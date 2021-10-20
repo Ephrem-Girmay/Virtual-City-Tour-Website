@@ -81,8 +81,6 @@ function timeZagreb() {
 
 //storing user's input into
 const cityName = document.getElementById("city");
-//const cityInsert = document.getElementById("cityInsert");
-//const output = document.getElementById("output");
 
 function cityInsert() {
   const something = cityName.value;
@@ -93,6 +91,4 @@ function cityInsert() {
   } else alert("Don't leave this field empty");
 
   const hallo = localStorage.getItem(something);
-
-  //document.getElementById("output").innerHTML = `${something}`;
 }
