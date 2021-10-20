@@ -33,7 +33,13 @@
   </head>
   <body onload="timeAbu()">
     <header class="roll ">
-      <div class="png-container"></div>
+      <div class="cities1-container">
+				<form>
+				<label for="fname">Which city you want to see on this page?</label>
+				<input type="text" id="city" name="cityName" /><br /><br />
+				</form>
+				<button onclick="cityInsert()">Send!</button>
+			  </div>
       <iframe
         frameborder="0"
         allowfullscreen="1"
