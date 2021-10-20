@@ -80,9 +80,8 @@ function timeZagreb() {
 }
 
 //storing user's input into
-const cityName = document.getElementById("city");
-
 function cityInsert() {
+  const cityName = document.getElementById("city");
   const something = cityName.value;
 
   if (something) {
