@@ -2,6 +2,7 @@
 @import "hero";
 @import "variables";
 @import "sophie";
+@import "weather";
 
 * {
 	position: relative;
@@ -9,6 +10,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	background-color: rgb(247, 247, 247);
 
@@ -29,14 +31,14 @@ header {
 
 	// .png-container {
 	// 	position: absolute;
-		
-        
+
+
 	// 	top: 0;
 	// 	bottom: 0;
 	// 	left: 0;
 	// 	right: 0;
 	// 	background-image: url(../img/car4.png);
-    //     z-index: 22;
+	//     z-index: 22;
 	// }
 
 	video {
@@ -64,6 +66,7 @@ header {
 		grid-template-columns: 30rem;
 		grid-template-rows: 60% 40%;
 		gap: 0;
+
 		.nav-container {
 			display: flex;
 			flex-direction: column;
@@ -73,6 +76,7 @@ header {
 				display: flex;
 				justify-content: center;
 				border-inline: 2px #fff solid;
+
 				button {
 					border: none;
 					background: none;
@@ -93,6 +97,7 @@ header {
 		justify-content: center;
 		flex-direction: column;
 		box-shadow: inset 0 0 10px #fff;
+
 		.city-name,
 		#time {
 			font-family: "Orbitron", sans-serif;
@@ -107,9 +112,11 @@ header {
 			animation: dtime 5s linear 3;
 			-webkit-animation: dtime 5s linear 3;
 		}
+
 		#time {
 			font-size: 3rem;
 		}
+
 		.city-name {
 			font-size: 4.2rem;
 		}
@@ -122,23 +129,7 @@ header {
 	}
 }
 
-.weather-container {
-	border-bottom-left-radius: 14px;
-	border-bottom-right-radius: 14px;
-	height: 30rem;
-	width: 30rem;
-	background-color: rgba(16, 17, 17, 0.562);
-	position: absolute;
-	bottom: 5%;
-	h1 {
-		color: #fff;
-		text-align: center;
-		margin-top: 4rem;
-	}
-}
-.weather-container {
-	left: 10%;
-}
+
 
 audio {
 	position: absolute;
@@ -149,7 +140,7 @@ audio {
 	-ms-border-radius: none;
 	-o-border-radius: none;
 	top: 90%;
-	left: 50%;
+	left: 165%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -167,6 +158,7 @@ audio {
 	-ms-transform: translatey(0);
 	-o-transform: translatey(0);
 }
+
 .nav-wrapper {
 	border-inline: 2px #fff solid;
 	transform: scale(0.2);
@@ -183,6 +175,7 @@ audio {
 	-moz-transition: 1s ease-in-out;
 	-ms-transition: 1s ease-in-out;
 	-o-transition: 1s ease-in-out;
+
 	ol {
 		display: flex;
 		flex-direction: column;
@@ -196,6 +189,7 @@ audio {
 		text-decoration: none;
 		color: #fff;
 		cursor: pointer;
+
 		&:first-child {
 			font-size: 2.2rem;
 			margin-left: -2rem;
@@ -204,6 +198,7 @@ audio {
 }
 
 @keyframes dtime {
+
 	0%,
 	18%,
 	20%,
@@ -216,6 +211,7 @@ audio {
 		color: #0e3742;
 		text-shadow: none;
 	}
+
 	18.1%,
 	20.1%,
 	30%,

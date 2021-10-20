@@ -1,7 +1,7 @@
-const weatherSthlm = 'https://api.openweathermap.org/data/2.5/weather?q=stockholm&units=metric&appid=a16a3ff4bd0eb2feb620a341adc49d95';
+const weatherAbuDhabi = 'https://api.openweathermap.org/data/2.5/weather?q=abu%20dhabi&units=metric&appid=a16a3ff4bd0eb2feb620a341adc49d95';
 
 async function getWeather() {
-    const response = await fetch(weatherSthlm);
+    const response = await fetch(weatherAbuDhabi);
     const data = await response.json();
     console.log(data);
     console.log(data.weather[0].icon);
