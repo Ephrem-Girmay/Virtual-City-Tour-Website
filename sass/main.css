@@ -23,7 +23,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -32,8 +32,79 @@
   -o-transform: translate(-50%, -50%);
 }
 
+.roll .section-hero .main-header .btn-hero:link,
+.roll .section-hero .main-header .btn-hero:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2rem 5rem;
+  border-radius: 10rem;
+  margin-top: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.9rem;
+}
+
+.roll .section-hero .main-header .btn-hero:hover,
+.roll .section-hero .main-header .btn-hero:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem #777;
+          box-shadow: 0 1rem 2rem #777;
+}
+
+.roll .section-hero .main-header .btn-hero:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.roll .section-hero .main-header .btn-hero:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem #777;
+          box-shadow: 0 0.5rem 1rem #777;
+}
+
+.roll .section-hero .main-header .btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.roll .section-hero .main-header .btn--animated {
+  animation: moveinup ease-in 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation: moveinup ease-in 1.5s;
+}
+
+.roll .section-hero .main-header .btn--animated::after {
+  background-color: #fff;
+}
+
+.roll .section-hero .main-header .btn-hero::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .roll .section-hero .main-header h1 {
-  color: black;
+  font-size: 10rem;
+  color: #fff;
+}
+
+.roll .section-hero .main-header h2 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #fff;
 }
 
 /** @format */
@@ -334,7 +405,7 @@ audio {
   -ms-border-radius: none;
   -o-border-radius: none;
   top: 90%;
-  left: 165%;
+  left: 200%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
