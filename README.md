@@ -1,1 +1,3 @@
 # project-jise
+
+This is a virtual city tour website made from pure htmal,sass and a little bit Javaskript let you explore these destinations from around the globe so that you can still feel like you’re seeing the world, even while you’re in stuck at home.
